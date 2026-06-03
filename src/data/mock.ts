@@ -73,6 +73,8 @@ export const challenges: Challenge[] = [
   },
 ];
 
+export type RewardTier = "Free and above" | "Gold and above" | "Platinum only";
+
 export type Reward = {
   id: string;
   partner: string;
@@ -81,6 +83,7 @@ export type Reward = {
   category: "Lifestyle" | "Travel" | "Fitness";
   status: "Redeem" | "Locked" | "Ready";
   logo: string;
+  tier: RewardTier;
 };
 
 export const rewards: Reward[] = [
@@ -92,6 +95,7 @@ export const rewards: Reward[] = [
     category: "Travel",
     status: "Redeem",
     logo: "✈️",
+    tier: "Free and above",
   },
   {
     id: "r2",
@@ -101,6 +105,7 @@ export const rewards: Reward[] = [
     category: "Lifestyle",
     status: "Ready",
     logo: "🧋",
+    tier: "Free and above",
   },
   {
     id: "r3",
@@ -110,6 +115,7 @@ export const rewards: Reward[] = [
     category: "Fitness",
     status: "Redeem",
     logo: "🏋️",
+    tier: "Free and above",
   },
   {
     id: "r4",
@@ -119,8 +125,80 @@ export const rewards: Reward[] = [
     category: "Fitness",
     status: "Locked",
     logo: "🏸",
+    tier: "Free and above",
+  },
+  {
+    id: "r5",
+    partner: "PathLab Myanmar",
+    description: "Basic Health Screening Package",
+    cost: 1500,
+    category: "Lifestyle",
+    status: "Locked",
+    logo: "🩺",
+    tier: "Platinum only",
+  },
+  {
+    id: "r6",
+    partner: "Pyone Dental",
+    description: "Dental Assessment",
+    cost: 800,
+    category: "Lifestyle",
+    status: "Redeem",
+    logo: "🦷",
+    tier: "Free and above",
+  },
+  {
+    id: "r7",
+    partner: "Garmin",
+    description: "10% Off Garmin Devices",
+    cost: 600,
+    category: "Fitness",
+    status: "Locked",
+    logo: "⌚",
+    tier: "Platinum only",
+  },
+  {
+    id: "r8",
+    partner: "Samsung Myanmar",
+    description: "10% Off Samsung Wearables",
+    cost: 600,
+    category: "Fitness",
+    status: "Redeem",
+    logo: "📱",
+    tier: "Gold and above",
+  },
+  {
+    id: "r9",
+    partner: "Adidas Myanmar",
+    description: "10% Off All Adidas Products",
+    cost: 500,
+    category: "Fitness",
+    status: "Redeem",
+    logo: "👟",
+    tier: "Gold and above",
+  },
+  {
+    id: "r10",
+    partner: "U9 Myanmar",
+    description: "K1,000 M-Pite San Top Up",
+    cost: 200,
+    category: "Lifestyle",
+    status: "Redeem",
+    logo: "📶",
+    tier: "Free and above",
+  },
+  {
+    id: "r11",
+    partner: "Atom Myanmar",
+    description: "K1,000 Airtime Top Up",
+    cost: 200,
+    category: "Lifestyle",
+    status: "Redeem",
+    logo: "📡",
+    tier: "Free and above",
   },
 ];
+
 
 export const leaderboard = [
   { name: "Aung Myo", points: 5820, tier: "Platinum Elite" },
