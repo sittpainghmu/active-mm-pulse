@@ -72,10 +72,24 @@ function RewardsPage() {
 function RewardCard({ reward }: { reward: Reward }) {
   const locked = reward.status === "Locked";
   const ready = reward.status === "Ready";
+  const platinumOnly = reward.tier === "Platinum only";
+  const goldPlus = reward.tier === "Gold and above";
   return (
     <div className={`rounded-2xl border p-4 flex flex-col ${locked ? "border-border bg-surface opacity-60" : "border-border bg-surface"}`}>
-      <div className="h-14 w-14 rounded-xl bg-surface-elevated grid place-items-center text-3xl mb-3">
-        {reward.logo}
+      <div className="flex items-start justify-between mb-3">
+        <div className="h-14 w-14 rounded-xl bg-surface-elevated grid place-items-center text-3xl">
+          {reward.logo}
+        </div>
+        {platinumOnly && (
+          <span className="text-[9px] font-bold uppercase tracking-wider rounded-full px-2 py-0.5 bg-platinum/15 text-platinum border border-platinum/30">
+            Platinum
+          </span>
+        )}
+        {goldPlus && (
+          <span className="text-[9px] font-bold uppercase tracking-wider rounded-full px-2 py-0.5 bg-gold/15 text-gold border border-gold/30">
+            Gold+
+          </span>
+        )}
       </div>
       <p className="text-[10px] text-muted-foreground uppercase tracking-widest">{reward.partner}</p>
       <p className="text-sm font-semibold leading-snug mt-0.5 line-clamp-2 flex-1">{reward.description}</p>
@@ -100,3 +114,4 @@ function RewardCard({ reward }: { reward: Reward }) {
     </div>
   );
 }
+
