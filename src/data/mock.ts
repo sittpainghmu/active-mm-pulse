@@ -197,6 +197,16 @@ export const rewards: Reward[] = [
     logo: "📡",
     tier: "Free and above",
   },
+  {
+    id: "r12",
+    partner: "OWAY",
+    description: "K10,000 Cashback on Booking",
+    cost: 1000,
+    category: "Travel",
+    status: "Redeem",
+    logo: "🧳",
+    tier: "Free and above",
+  },
 ];
 
 
