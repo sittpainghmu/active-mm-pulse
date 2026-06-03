@@ -207,6 +207,36 @@ export const rewards: Reward[] = [
     logo: "🧳",
     tier: "Free and above",
   },
+  {
+    id: "r13",
+    partner: "TEAK WOOD BAR & GRILL",
+    description: "10% Off Vegetarian Dishes — Pan Pacific Yangon",
+    cost: 800,
+    category: "Travel",
+    status: "Redeem",
+    logo: "🌿",
+    tier: "Gold and above",
+  },
+  {
+    id: "r14",
+    partner: "PAN PACIFIC YANGON",
+    description: "Pool Day Pass",
+    cost: 2000,
+    category: "Travel",
+    status: "Locked",
+    logo: "🏊",
+    tier: "Gold and above",
+  },
+  {
+    id: "r15",
+    partner: "PARKROYAL YANGON",
+    description: "Hi-Tea Set for Two",
+    cost: 1500,
+    category: "Travel",
+    status: "Locked",
+    logo: "🫖",
+    tier: "Gold and above",
+  },
 ];
 
 
